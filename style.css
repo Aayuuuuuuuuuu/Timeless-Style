@@ -1,0 +1,1180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* MAIN CONTAINER */
+
+.main-container {
+    width: 100%;
+}
+
+/* HEADER / NAVBAR */
+
+header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: rgba(255, 255, 255, 0.97);
+
+    z-index: 1000;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 70px;
+    height: auto;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    /* overflow: hidden; */
+}
+
+nav a {
+
+    position: relative;
+
+    color: #111;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #777;
+}
+
+nav a::after {
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #111;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* COLLECTION */
+.subnav {
+    position: relative;
+    display: inline-block;
+}
+
+/* COLLECTION BUTTON */
+.subnavbtn {
+    color: #111;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+}
+
+/* DROPDOWN */
+.subnav-content {
+    display: none;
+    position: absolute;
+
+    top: 100%;       /* directly below Collection */
+    left: 0;
+
+    background-color: white;
+
+    min-width: 180px;
+
+    padding: 10px 0;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    z-index: 9999;
+}
+
+/* DROPDOWN LINKS */
+.subnav-content a {
+    display: block;
+
+    padding: 10px 18px;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+/* HOVER EFFECT */
+.subnav-content a:hover {
+    background-color: #f5f5f5;
+    color: #777;
+}
+
+/* SHOW DROPDOWN */
+.subnav:hover .subnav-content {
+    display: block;
+}
+/* GENERAL SECTION */
+
+section {
+    width: 100%;
+}
+
+
+/* HERO PAGE */
+
+#hero-page {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 90px;
+
+    padding: 35px 0;
+
+    /* background-color: #eee9dd; */
+
+    overflow: hidden;
+}
+
+
+/* COMPLETE HERO IMAGE */
+
+.himg {
+    width: 100%;
+    max-width: 1450px;
+    padding: 10px 70px 18px 100px;
+
+    margin: auto;
+    margin: 18px auto;
+
+    display: block;
+}
+
+.himg img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+}
+
+
+/* HERO MAIN OVERLAY */
+
+#hero-page main {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+
+    pointer-events: none;
+}
+
+
+/* SHOP MEN / SHOP WOMEN */
+
+.button {
+    position: absolute;
+
+    left: 20.5%;
+    top: 64.5%;
+
+    display: flex;
+
+    gap: 20px;
+
+    pointer-events: auto;
+}
+
+.button button {
+    min-width: 155px;
+
+    padding: 15px 30px;
+
+    border: none;
+
+    background-color: white;
+
+    color: #111;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.button button:hover {
+    background-color: #111;
+
+    color: white;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+   /* SECOND / COLLECTION SECTION */
+
+
+#heroine-container {
+    width: 100%;
+
+    padding: 80px 7%;
+
+    background-color: white;
+}
+
+
+/* IMAGE WRAPPER */
+
+.bimg {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+
+/* BIG IMAGE */
+
+.big-img {
+    width: 65%;
+}
+
+.big-img img {
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+
+/* SMALL IMAGES */
+
+.small-img {
+    width: 35%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.small-img img {
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+   /* BESTSELLER SECTION */
+
+#third-container {
+    width: 100%;
+
+    padding: 90px 7%;
+
+    background-color: #fff;
+
+    text-align: center;
+}
+
+
+/* BESTSELLER TITLE */
+
+.best {
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+.best h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+}
+
+.best::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 1px;
+
+    background-color: #111;
+
+    margin: 20px auto 0;
+}
+
+
+/* PRODUCT CONTAINER */
+
+.container {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+    margin-top: 0;
+}
+
+
+/* PRODUCT */
+
+.sub-box {
+    width: 100%;
+
+    height: auto;
+
+    background: transparent;
+
+    border-radius: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    color: #111;
+
+    padding: 0;
+}
+
+
+/* PRODUCT IMAGE */
+
+.sub-box img {
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: cover;
+
+    margin-bottom: 25px;
+
+    transition: transform 0.5s ease;
+}
+
+.sub-box:hover img {
+    transform: scale(1.02);
+}
+
+
+/* PRODUCT NAME */
+
+.sub-box h2 {
+    width: 100%;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 10px;
+}
+
+
+/* PRODUCT PRICE */
+
+.sub-box p {
+    width: 100%;
+
+    text-align: center;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    color: #555;
+}
+
+.sub-box del {
+    color: #999;
+
+    margin-right: 8px;
+}
+
+.sub-box mark {
+    background: transparent;
+
+    color: #c04c4c;
+
+    font-weight: 500;
+}
+
+   /* MEN / WOMEN BUTTONS */
+
+.tbutton {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 70px 0 0;
+
+    flex-direction: row;
+}
+
+.tbutton button {
+    min-width: 150px;
+
+    background-color: #222;
+
+    color: white;
+
+    border: none;
+
+    padding: 16px 40px;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.tbutton button:hover {
+    background-color: white;
+
+    color: #222;
+
+    border: 1px solid #222;
+
+    transform: translateY(-3px);
+}
+
+/* NEWSLETTER */
+
+#fourth-container {
+    width: 100%;
+
+    margin-top: 50px;
+
+    padding: 55px 8%;
+
+    background-color: #1e1e1e;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* NEWSLETTER HEADING */
+
+.four-container h1 {
+    font-size: 22px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    margin: 0;
+}
+
+
+/* SIGNUP */
+
+.signup-group {
+    width: 55%;
+
+    max-width: 650px;
+
+    height: 55px;
+
+    display: flex;
+}
+
+
+/* EMAIL */
+
+#email {
+    flex: 1;
+
+    min-width: 0;
+
+    font-size: 14px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    outline: none;
+
+    background-color: white;
+
+    color: #111;
+}
+
+#email::placeholder {
+    color: #888;
+}
+
+
+/* SUBSCRIBE BUTTON */
+
+.fourth-button {
+    width: 150px;
+
+    background-color: #c94b4b;
+
+    color: white;
+
+    border: none;
+
+    padding: 0 25px;
+
+    font-weight: 600;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.fourth-button:hover {
+    background-color: #a63737;
+}
+
+   /* ABOUT US */
+
+#fifth-container {
+    width: 100%;
+
+    height: auto;
+
+    padding: 100px 8%;
+
+    background-color: white;
+}
+
+
+/* ABOUT HEADING */
+
+.five-container {
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    margin-bottom: 35px;
+}
+
+.five-container h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 45px;
+
+    font-weight: 400;
+}
+
+
+/* ABOUT CONTENT */
+
+.fifth-content {
+    width: 100%;
+
+    max-width: 1100px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #555;
+}
+
+.fifth-content p {
+    margin-bottom: 20px;
+}
+
+.fifth-content b {
+    color: #222;
+}
+
+
+/* LEARN MORE */
+
+.fifth-button {
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: auto;
+
+    flex-direction: row;
+}
+
+.fifth-button button {
+    background-color: #222;
+
+    color: white;
+
+    border: none;
+
+    padding: 16px 40px;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.fifth-button button:hover {
+    background-color: white;
+
+    color: #222;
+
+    border: 1px solid #222;
+
+    transform: translateY(-3px);
+}
+
+
+/* HORIZONTAL LINE */
+
+#fifth-container hr {
+    border: none;
+
+    border-top: 1px solid #ddd;
+
+    margin-top: 50px;
+}
+
+   /* FOOTER */
+
+#footer {
+    width: 100%;
+
+    padding: 70px 8% 60px;
+
+    background-color: #242222;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 40px;
+
+    box-sizing: border-box;
+}
+
+
+/* FOOTER COLUMN */
+
+.footer-column {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* FOOTER TITLE */
+
+.footer-column h3 {
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    margin: 0 0 15px;
+}
+
+
+/* FOOTER TEXT */
+
+.footer-column p {
+    margin: 0;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-column a {
+    color: #cfcfcf;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: white;
+
+    padding-left: 5px;
+}
+
+
+#sixth-container {
+    width: 100%;
+
+    padding: 25px 8%;
+
+    background-color: #242222;
+
+    border-top: 1px solid #4a4a4a;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+#sixth-container p {
+    color: #aaa;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin: 8px 0;
+}
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    /* HEADER */
+
+    header {
+        padding: 0 25px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+
+    /* HERO */
+
+    .button {
+        left: 20%;
+
+        top: 64%;
+    }
+
+    .button button {
+        min-width: 125px;
+
+        padding: 13px 20px;
+
+        font-size: 13px;
+    }
+
+
+    /* SECOND SECTION */
+
+    #heroine-container {
+        padding: 60px 5%;
+    }
+
+    .bimg {
+        gap: 15px;
+    }
+
+
+    /* PRODUCTS */
+
+    #third-container {
+        padding: 70px 5%;
+    }
+
+    .container {
+        gap: 20px;
+    }
+
+    .sub-box img {
+        height: 350px;
+    }
+
+
+    /* NEWSLETTER */
+
+    #fourth-container {
+        padding: 45px 5%;
+    }
+
+    .signup-group {
+        width: 50%;
+    }
+
+
+    /* ABOUT */
+
+    #fifth-container {
+        padding: 70px 5%;
+    }
+
+
+    /* FOOTER */
+
+    #footer {
+        padding: 60px 5%;
+    }
+}
+
+
+/*  MOBILE */
+
+@media (max-width: 700px) {
+
+    /* HEADER */
+
+    header {
+        height: 65px;
+
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    #hero-page {
+        margin-top: 65px;
+    }
+
+
+    .button {
+        left: 18%;
+
+        top: 64%;
+
+        gap: 8px;
+    }
+
+    .button button {
+        min-width: 105px;
+
+        padding: 10px 12px;
+
+        font-size: 10px;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    /* SECOND SECTION */
+
+    #heroine-container {
+        padding: 50px 20px;
+    }
+
+    .bimg {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .big-img {
+        width: 100%;
+    }
+
+    .small-img {
+        width: 100%;
+
+        flex-direction: row;
+
+        gap: 15px;
+    }
+
+    .small-img img {
+        width: 50%;
+    }
+
+
+    /* BESTSELLER */
+
+    #third-container {
+        padding: 60px 20px;
+    }
+
+    .best {
+        margin-bottom: 45px;
+    }
+
+    .best h2 {
+        font-size: 32px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .sub-box img {
+        width: 100%;
+
+        height: 450px;
+    }
+
+    .sub-box h2 {
+        font-size: 14px;
+    }
+
+
+    /* BUTTONS */
+
+    .tbutton {
+        padding-top: 50px;
+    }
+
+    .tbutton button {
+        min-width: 120px;
+
+        padding: 14px 25px;
+
+        font-size: 12px;
+    }
+
+
+    /* NEWSLETTER */
+
+    #fourth-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 50px 20px;
+    }
+
+    .four-container h1 {
+        font-size: 20px;
+    }
+
+    .signup-group {
+        width: 100%;
+
+        height: auto;
+
+        flex-direction: column;
+    }
+
+    #email {
+        width: 100%;
+
+        height: 55px;
+    }
+
+    .fourth-button {
+        width: 100%;
+
+        height: 55px;
+    }
+
+
+    /* ABOUT */
+
+    #fifth-container {
+        padding: 65px 20px;
+    }
+
+    .five-container h1 {
+        font-size: 35px;
+    }
+
+    .fifth-content {
+        font-size: 15px;
+    }
+
+    .fifth-button button {
+        padding: 14px 30px;
+
+        font-size: 12px;
+    }
+
+
+    /* FOOTER */
+
+    #footer {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 55px 20px;
+
+        gap: 45px 20px;
+    }
+
+    .footer-column h3 {
+        font-size: 13px;
+    }
+
+    .footer-column a {
+        font-size: 13px;
+    }
+
+
+    /* COPYRIGHT */
+
+    #sixth-container {
+        padding: 20px;
+    }
+
+    #sixth-container p {
+        font-size: 11px;
+    }
+}
+
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 400px) {
+
+    .button {
+        left: 15%;
+
+        top: 64%;
+    }
+
+    .button button {
+        min-width: 90px;
+
+        padding: 9px 8px;
+
+        font-size: 9px;
+    }
+
+    .small-img {
+        flex-direction: column;
+    }
+
+    .small-img img {
+        width: 100%;
+    }
+
+    .tbutton {
+        gap: 10px;
+    }
+
+    .tbutton button {
+        min-width: 105px;
+
+        padding: 12px 15px;
+    }
+
+    #footer {
+        grid-template-columns: 1fr;
+    }
+}
